@@ -1,15 +1,20 @@
-let value1=false;
-let value2=false;
-let value3=false;
-let value4=false;
-let value5=false;
-let value6=false;
-let value7=false;
-let value8=false;
-let value9=false;
+function calculator(){
+let value1;
+let value2;
+let value3;
+let value4;
+let value5;
+let value6;
+let value7;
+let value8;
+let value9;
 
-for(i=1; i<10; i++){
-  
+value1=1;
+value2=3;
+value4=7;
+let values= [value1, value2, value3, value4, value5, value6, value7, value8, value9]
+console.log("test")
+  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
 }
 
 /////NUMBERS/////
