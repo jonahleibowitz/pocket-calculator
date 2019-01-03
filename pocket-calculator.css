@@ -1,9 +1,13 @@
 table, td{
-  border: 1px solid white;
+  border: 25px dashed darkviolet;
+  border radius: 15px,25px,35px,45px;
   background-color: black;
   border-collapse: collapse;
+  text-align: right;
 }
-
+.table {
+  text-align: center;
+}
 }
 
 th {
@@ -12,22 +16,51 @@ th {
 }
 
 button {
-   background-color: #ffdead;
+   background-color: green;
+   border-radius: 250px;
    padding-right: 10%;
   display: inline-block;
   margin: auto;
   margin-left: 1%;
   margin-right:1%;
-  height: 3em;
-  font: 1.1em "Century Gothic", "Century Gothic", "Apple Gothic", sans-serif;
+  height:3em;
+   width:130px;
+  font: 1.1em "Comic Sans MS", cursive, sans-serif;
 }
 button.function {
-   background-color: #fa8072;
+   background-color: orange;
+   height:3em;
+    width:130px;
+  display: inline-block;
+  margin: auto;
+  margin-left: 1%;
+  margin-right:1%;
+  font: 1.1em "Comic Sans MS", cursive, sans-serif;
+  "Comic Sans MS", cursive, sans-serif
+}
+
+h1{
+color: deeppink;
+font: "Comic Sans MS", cursive, sans-serif;
+background-color: black;
+}
+
+button.zero{
+  width:260;
+}
+
+button {
+   background-color: deeppink;
    padding-right: 10%;
   display: inline-block;
   margin: auto;
   margin-left: 1%;
   margin-right:1%;
-  height: 3em;
-  font: 1.1em "Century Gothic", "Century Gothic", "Apple Gothic", sans-serif;
+  height:3em;
+   width:130px;
+  font: 1.1em "Comic Sans MS", cursive, sans-serif;
+}
+
+body{
+  background-color: teal;
 }
