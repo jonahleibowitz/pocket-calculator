@@ -14,7 +14,7 @@
 //}
 
 var values= []
-
+var decimal= false;
 
 /////NUMBERS/////
 function button1() {
@@ -37,6 +37,56 @@ function button3() {
   }
   document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
 }
+
+function button4() {
+  if (values.length<9){
+    values.push(4);
+  }
+  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+}
+
+function button5() {
+  if (values.length<9){
+    values.push(5);
+  }
+  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+}
+
+function button6() {
+  if (values.length<9){
+    values.push(6);
+  }
+  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+}
+
+function button7() {
+  if (values.length<9){
+    values.push(7);
+  }
+  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+}
+
+function button8() {
+  if (values.length<9){
+    values.push(8);
+  }
+  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+}
+
+function button9() {
+  if (values.length<9){
+    values.push(9);
+  }
+  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+}
+
+function button0() {
+  if (values.length<9){
+    values.push(0);
+  }
+  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+}
+
 ///////////////
 
 ////FUNCTIONS//////
@@ -44,6 +94,12 @@ function buttonAC() {
   values.length=0;
   ;
   document.getElementById("calc-output").innerHTML=`<span style='color: white;'>0</span>`;
+}
+function buttonPoint() {
+  if (values.length<9){
+    values.push(".");
+  }
+  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
 }
 
 //function button2() {
