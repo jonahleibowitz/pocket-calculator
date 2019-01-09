@@ -98,7 +98,6 @@ function buttonAC() {
 }
 function buttonPoint() {
     values.push(".");
-    var x++;
   }
   document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
 }
