@@ -21,70 +21,70 @@ function button1() {
   if (values.length<9){
     values.push(1);
   }
-  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
 function button2() {
   if (values.length<9){
     values.push(2);
   }
-  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
 function button3() {
   if (values.length<9){
     values.push(3);
   }
-  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
 function button4() {
   if (values.length<9){
     values.push(4);
   }
-  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
 function button5() {
   if (values.length<9){
     values.push(5);
   }
-  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
 function button6() {
   if (values.length<9){
     values.push(6);
   }
-  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
 function button7() {
   if (values.length<9){
-    values.push(7);
+    values.push(`OOOOOOOOOOOOOOH`);
   }
-  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
 function button8() {
   if (values.length<9){
     values.push(8);
   }
-  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
 function button9() {
   if (values.length<9){
-    values.push(9);
+    values.push(`SouljaBoytellem`);
   }
-  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
 function button0() {
   if (values.length<9){
     values.push(0);
   }
-  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
 ///////////////
@@ -93,13 +93,15 @@ function button0() {
 function buttonAC() {
   values.length=0;
   ;
-  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>0</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>0</span>`;
 }
+
 function buttonPoint() {
-  if (values.length<9){
+  if (values.length<10 && decimal==false){
     values.push(".");
+    decimal=true;
   }
-  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
 //function button2() {
