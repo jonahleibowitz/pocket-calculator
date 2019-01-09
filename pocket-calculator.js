@@ -16,7 +16,7 @@
 var values= []
 var decimal= false;
 var x=9;
-
+var numberOne;
 /////NUMBERS/////
 function button1() {
   if (values.length<x){
@@ -62,7 +62,7 @@ function button6() {
 
 function button7() {
   if (values.length<x){
-    values.push(7);
+    values.push(`OOOOOOOOOOOOH`);
   }
   document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
@@ -76,7 +76,7 @@ function button8() {
 
 function button9() {
   if (values.length<x){
-    values.push(9);
+    values.push(`SouljaBoytellem`);
   }
   document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
@@ -93,16 +93,31 @@ function button0() {
 ////FUNCTIONS//////
 function buttonAC() {
   values.length=0;
-  ;
+  decmial=false;
+  x=9;
   document.getElementById("calc-output").innerHTML=`<span>0</span>`;
 }
+
+function calculations(){
+  console.log(vales.join(''));
+}
+
+
 
 function buttonPoint() {
   if (values.length<10 && decimal==false){
     values.push(".");
     decimal=true;
+    x=x+1;
   }
   document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
+}
+
+function buttonNegate() {
+    console.log(Number(values.join('')*(-1)));
+
+
+  document.getElementById("calc-output").innerHTML=`<span>${(Number(values.join('')*(-1)))}</span>`;
 }
 
 //function button2() {
