@@ -16,7 +16,11 @@
 var values= []
 var decimal= false;
 var x=9;
-var numberOne;
+var num
+
+function add() {
+
+}
 /////NUMBERS/////
 function button1() {
   if (values.length<x){
@@ -108,18 +112,22 @@ function buttonPoint() {
   if (values.length<10 && decimal==false){
     values.push(".");
     decimal=true;
-    x=x+1;
+    x++;
   }
   document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
 function buttonNegate() {
-    console.log(Number(values.join('')*(-1)));
+    let negative=Number(values.join(''))/(-1);
 
-
-  document.getElementById("calc-output").innerHTML=`<span>${(Number(values.join('')*(-1)))}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${negative}</span>`;
 }
 
+function buttonPercent() {
+    let percent=Number(values.join(''))/(100);
+
+  document.getElementById("calc-output").innerHTML=`<span>${percent}</span>`;
+}
 //function button2() {
 //  document.getElementById("calc-output").innerHTML="<span style='color: white;'>2</span>";
 //}
