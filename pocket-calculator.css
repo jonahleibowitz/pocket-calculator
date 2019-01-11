@@ -4,6 +4,7 @@ table, td{
   background-color: black;
   border-collapse: collapse;
   text-align: right;
+  color:white;
 }
 .table {
   text-align: center;
@@ -11,9 +12,11 @@ table, td{
 
 div.tableDiv{
   background-color: deeppink;
+  border-width: medium;
   margin:250px;
   margin-top:50px;
   border-radius:20px;
+  border-style: groove;
 }
 
 p{
@@ -28,7 +31,7 @@ th {
 }
 
 button {
-   background-color: green;
+   background-color:deeppink;
    border-radius: 250px;
    padding-right: 10%;
   display: inline-block;
@@ -38,6 +41,7 @@ button {
   height:3em;
    width:130px;
   font: 1.1em "Comic Sans MS", cursive, sans-serif;
+
 }
 button.function {
    background-color: orange;
@@ -49,6 +53,7 @@ button.function {
   margin-right:1%;
   font: 1.1em "Comic Sans MS", cursive, sans-serif;
   "Comic Sans MS", cursive, sans-serif
+
 }
 
 h1{
@@ -57,12 +62,11 @@ font: "Comic Sans MS", cursive, sans-serif;
 background-color: black;
 }
 
-button.zero{
-  width:260;
+#zero{
+  width:260px;
 }
 
 button {
-   background-color: deeppink;
    padding-right: 10%;
   display: inline-block;
   margin: auto;
@@ -71,6 +75,7 @@ button {
   height:3em;
    width:130px;
   font: 1.1em "Comic Sans MS", cursive, sans-serif;
+  color:black;
 }
 
 body{

@@ -16,9 +16,10 @@
 var values= []
 var decimal= false;
 var x=9;
-var num
+var a;
+var b;
 
-function add() {
+function buttonPlus() {
 
 }
 /////NUMBERS/////
