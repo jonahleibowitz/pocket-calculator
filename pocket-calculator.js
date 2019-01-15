@@ -14,7 +14,7 @@
 //}
 
 var values= []
-var decimal= false;
+var decimal=false;
 var x=9;
 var a;
 var b;
@@ -67,7 +67,7 @@ function button6() {
 
 function button7() {
   if (values.length<x){
-    values.push(`OOOOOOOOOOOOH`);
+    values.push(7);
   }
   document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
@@ -81,7 +81,7 @@ function button8() {
 
 function button9() {
   if (values.length<x){
-    values.push(`SouljaBoytellem`);
+    values.push(9);
   }
   document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
@@ -98,30 +98,34 @@ function button0() {
 ////FUNCTIONS//////
 function buttonAC() {
   values.length=0;
-  decmial=false;
+  decimal==false;
   x=9;
   document.getElementById("calc-output").innerHTML=`<span>0</span>`;
 }
 
 function calculations(){
-  console.log(vales.join(''));
+  console.log(values.join(''));
 }
 
 
 
 function buttonPoint() {
   if (values.length<10 && decimal==false){
-    values.push(".");
-    decimal=true;
+    if(values.length==0){
+    values.push("0.");
+    }
+    else{values.push(".");}
+    decimal==true;
     x++;
   }
   document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
 function buttonNegate() {
-    let negative=Number(values.join(''))/(-1);
+  negative = Number(values.join(''))*(-1);
+    values.splice(0, 10, negative);
 
-  document.getElementById("calc-output").innerHTML=`<span>${negative}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${values}</span>`;
 }
 
 function buttonPercent() {
