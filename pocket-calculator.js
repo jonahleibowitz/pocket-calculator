@@ -121,6 +121,8 @@ function buttonPoint() {
   document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
+
+
 function buttonNegate() {
   negative = Number(values.join(''))*(-1);
     values.splice(0, 10, negative);
