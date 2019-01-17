@@ -139,11 +139,17 @@ function buttonPercent() {
 }
 
 function buttonPlus() {
-  a = Number(values.join(''));
+  a = parseInt(values.join(''));
   document.getElementById("calc-output").innerHTML=`<span>${a}</span>`;
   values.length=0;
   document.getElementById("calc-output").innerHTML=`<span>${` + `}</span>`;
-  add();
+
+}
+
+function buttonEquals(){
+if ()
+
+
 }
   function add(){
   b=Number(values.join(''));
