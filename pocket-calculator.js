@@ -19,6 +19,7 @@ var x=9;
 var a;
 var b;
 
+
 function buttonPlus() {
 
 }
@@ -131,9 +132,32 @@ function buttonNegate() {
 }
 
 function buttonPercent() {
-    let percent=Number(values.join(''))/(100);
+  hundredth = Number(values.join(''))/(100);
+    values.splice(0, 10, hundredth);
 
-  document.getElementById("calc-output").innerHTML=`<span>${percent}</span>`;
+  document.getElementById("calc-output").innerHTML=`<span>${hundredth}</span>`;
+}
+
+function buttonPlus() {
+  a = Number(values.join(''));
+  document.getElementById("calc-output").innerHTML=`<span>${a}</span>`;
+  values.length=0;
+  document.getElementById("calc-output").innerHTML=`<span>${` + `}</span>`;
+  add();
+}
+  function add(){
+  b=Number(values.join(''));
+  let sum= eval(a + b);
+  values.splice(0, 10, sum);
+  document.getElementById("calc-output").innerHTML=`<span>${values}</span>`;
+}
+
+
+function buttonMinus() {
+  subtraction = Number(values.join(''))-(1);
+    values.splice(0, 10, subtraction);
+
+  document.getElementById("calc-output").innerHTML=`<span>${values}</span>`;
 }
 //function button2() {
 //  document.getElementById("calc-output").innerHTML="<span style='color: white;'>2</span>";
