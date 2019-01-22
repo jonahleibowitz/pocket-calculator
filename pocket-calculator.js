@@ -162,14 +162,14 @@ function numbers(math){
   if (math=='0' && numlength<=9){
     expression+='0';
     outputExpression+='0';
-    document.getElementById('calc-output').innerHTML=outputExpression;
+    document.getElementById('calc-output').innerHTML=outputExpression.toLocaleString('en');
     notNumber=true;
     numlength++;
   }
   if (math=='pi'&& numlength<=9){
     expression+='3.14';
     outputExpression+='π';
-    document.getElementById('calc-output').innerHTML=outputExpression;
+    document.getElementById('calc-output').innerHTML=outputExpression.toLocaleString('en');
     notNumber=true;
     numlength++;
   }
@@ -264,41 +264,12 @@ function numbers(math){
   notNumber=true;
   decimalNum=false;
   }
-<<<<<<< HEAD
-  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
+  document.getElementById("calc-output").innerHTML=outputExpression;
 }
 
 
 
-function buttonNegate() {
-  negative = Number(values.join(''))*(-1);
-    values.splice(0, 10, negative);
 
-  document.getElementById("calc-output").innerHTML=`<span>${values}</span>`;
-}
-
-function buttonPercent() {
-  hundredth = Number(values.join(''))/(100);
-    values.splice(0, 10, hundredth);
-
-  document.getElementById("calc-output").innerHTML=`<span>${hundredth}</span>`;
-}
-
-function buttonPlus() {
-  a = parseInt(values.join(''));
-  document.getElementById("calc-output").innerHTML=`<span>${a}</span>`;
-  values.length=0;
-  document.getElementById("calc-output").innerHTML=`<span>${` + `}</span>`;
-
-}
-
-function buttonEquals(){
-if ()
-
-
-=======
->>>>>>> 6f57feb5dac567d73b83af9a2e997fb41ab7d0ff
-}
 function AC(){
   expression='';
   outputExpression='';
@@ -323,7 +294,7 @@ function equals(math){
 
     }
     else{
-      document.getElementById('calc-output').innerHTML=finalExpression;
+      document.getElementById('calc-output').innerHTML=finalExpression.toFixed(9-finalexpression.length);
     }
 
   }

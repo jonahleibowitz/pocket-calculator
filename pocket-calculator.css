@@ -53,7 +53,29 @@ button.function {
   margin-right:1%;
   font: 1.1em "Comic Sans MS", cursive, sans-serif;
   "Comic Sans MS", cursive, sans-serif
+}
 
+button.mightyfine {
+   background-color: Aqua;
+   height:3em;
+    width:130px;
+  display: inline-block;
+  margin: auto;
+  margin-left: 1%;
+  margin-right:1%;
+  font: 1.1em "Comic Sans MS", cursive, sans-serif;
+  "Comic Sans MS", cursive, sans-serif
+}
+button.answer {
+   background-color: crimson;
+   height:3em;
+    width:130px;
+  display: inline-block;
+  margin: auto;
+  margin-left: 1%;
+  margin-right:1%;
+  font: 1.1em "Comic Sans MS", cursive, sans-serif;
+  "Comic Sans MS", cursive, sans-serif
 }
 
 h1{
@@ -80,6 +102,14 @@ button {
 
 button.function:hover{
   color: orange;
+  background-color:black;
+}
+button.mightyfine:hover{
+  color: aqua;
+  background-color:black;
+}
+button.answer:hover{
+  color: crimson;
   background-color:black;
 }
 button:hover{
