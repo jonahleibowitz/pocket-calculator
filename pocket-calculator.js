@@ -294,7 +294,7 @@ function equals(math){
 
     }
     else{
-      document.getElementById('calc-output').innerHTML=finalExpression.toFixed(9-finalexpression.length);
+      document.getElementById('calc-output').innerHTML=finalExpression;
     }
 
   }
