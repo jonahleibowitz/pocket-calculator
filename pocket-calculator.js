@@ -1,124 +1,270 @@
-//function calculator(){
-//let value1;
-//let value2;
-//let value3;
-//let value4;
-//let value5;
-//let value6;
-//let value7;
-//let value8;
-//let value9;
-
-//console.log("test")
-//  document.getElementById("calc-output").innerHTML=`<span style='color: white;'>${values.join("")}</span>`;
-//}
-
-var values= []
-var decimal=false;
-var x=9;
-var a;
-var b;
+var expression='';
+var outputExpression='';
+var notNumber=false;
+var decimalZero=false;
+var decimalPoint=true;
+var decimalNum=false;
+var numlength=1;
+var ans='';
 
 
-function buttonPlus() {
-
-}
-/////NUMBERS/////
-function button1() {
-  if (values.length<x){
-    values.push(1);
+function operations(math) {
+  if(math == '+' && notNumber==true) {
+    expression+="+";
+    outputExpression+="+";
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=false;
+    numlength=1;
   }
-  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
-}
 
-function button2() {
-  if (values.length<x){
-    values.push(2);
+  if(math == '+' && notNumber==false){
+    var theStringMinusOne = expression.substring(0, (expression.length-1));
+    var outputStringMinusOne = outputExpression.substring(0, expression.length-1);
+    expression= theStringMinusOne
+    outputExpression= outputStringMinusOne
+    document.getElementById('calc-output').innerHTML=outputStringMinusOne;
+    expression+="+";
+    outputExpression+="+";
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=false;
+    numlength=1;
   }
-  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
-}
 
-function button3() {
-  if (values.length<x){
-    values.push(3);
+
+  if(math=='x' && notNumber==true){
+    expression+='*';
+    outputExpression+="x";
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=false;
+	numlength=1;
   }
-  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
-}
-
-function button4() {
-  if (values.length<x){
-    values.push(4);
+  if(math == 'x' && notNumber==false){
+    var theStringMinusOne = expression.substring(0, (expression.length-1));
+    var outputStringMinusOne = outputExpression.substring(0, expression.length-1);
+    expression= theStringMinusOne
+    outputExpression= outputStringMinusOne
+    document.getElementById('calc-output').innerHTML=outputStringMinusOne;
+    expression+="*";
+    outputExpression+="x";
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=false;
+    numlength=1;
   }
-  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
-}
-
-function button5() {
-  if (values.length<x){
-    values.push(5);
+  if(math == '/' && notNumber==true) {
+    expression+="/";
+    outputExpression+="/";
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=false;
+    numlength=1;
   }
-  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
-}
-
-function button6() {
-  if (values.length<x){
-    values.push(6);
+  if(math == '/' && notNumber==false){
+    var theStringMinusOne = expression.substring(0, (expression.length-1));
+    var outputStringMinusOne = outputExpression.substring(0, expression.length-1);
+    expression= theStringMinusOne
+    outputExpression= outputStringMinusOne
+    document.getElementById('calc-output').innerHTML=outputStringMinusOne;
+    expression+="/";
+    outputExpression+="/";
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=false;
+    numlength=1;
   }
-  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
-}
-
-function button7() {
-  if (values.length<x){
-    values.push(7);
+  if(math=='-' && notNumber==true){
+    expression+='-';
+    outputExpression+="-";
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=false;
+    numlength=1;
   }
-  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
-}
-
-function button8() {
-  if (values.length<x){
-    values.push(8);
+  if(math == '-' && notNumber==false){
+    var theStringMinusOne = expression.substring(0, (expression.length-1));
+    var outputStringMinusOne = outputExpression.substring(0, expression.length-1);
+    expression= theStringMinusOne
+    outputExpression= outputStringMinusOne
+    document.getElementById('calc-output').innerHTML=outputStringMinusOne;
+    expression+="-";
+    outputExpression+="-";
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=false;
+    numlength=1;
   }
-  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
-}
-
-function button9() {
-  if (values.length<x){
-    values.push(9);
+  if(math == '%' && notNumber==true){
+    expression+='*.01'
+    outputExpression+="%";
+    document.getElementById('calc-output').innerHTML=outputExpression;
   }
-  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
-}
-
-function button0() {
-  if (values.length<x){
-    values.push(0);
+  if(math == '%' && notNumber==false){
+    var theStringMinusOne = expression.substring(0, (expression.length-1));
+    var outputStringMinusOne = outputExpression.substring(0, expression.length-1);
+    expression= theStringMinusOne
+    outputExpression= outputStringMinusOne
+    document.getElementById('calc-output').innerHTML=outputStringMinusOne;
+    expression+="%";
+    outputExpression+="%";
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=false;
+    numlength=1;
   }
-  document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
-}
+  if (math=='.' && notNumber==true && decimalNum==false){
+    expression+='.'+'0';
+    outputExpression+='.'+'0';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    decimalZero=true;
+    decimalPoint=true;
+    decimalNum=true;
 
-///////////////
-
-////FUNCTIONS//////
-function buttonAC() {
-  values.length=0;
-  decimal==false;
-  x=9;
-  document.getElementById("calc-output").innerHTML=`<span>0</span>`;
-}
-
-function calculations(){
-  console.log(values.join(''));
-}
-
-
-
-function buttonPoint() {
-  if (values.length<10 && decimal==false){
-    if(values.length==0){
-    values.push("0.");
-    }
-    else{values.push(".");}
-    decimal==true;
-    x++;
   }
+  if(math == 'delete'){
+    var theStringMinusOne = expression.substring(0, (expression.length-1));
+    var outputStringMinusOne = outputExpression.substring(0, expression.length-1);
+    expression= theStringMinusOne
+    outputExpression= outputStringMinusOne
+    document.getElementById('calc-output').innerHTML=outputStringMinusOne;
+  }
+
+}
+function numbers(math){
+  if(decimalZero==true){
+    let r=expression.split('')
+    let q=outputExpression.split('')
+    r.pop();
+    q.pop();
+    expression=r.join('');
+    outputExpression=q.join('')
+    decimalZero=false;
+  }
+  if (math=="negation"){
+	  let z=outputExpression.split('')
+	  expression+="*-1";
+	  let x=true;
+	  for(let i=outputExpression.length-1;i>=0;i--){
+		  if((outputExpression[i]=='x'||outputExpression[i]=='/'||outputExpression[i]=='+'||outputExpression=='-') && x==true){
+			  x=false;
+			  var tempArray=[];
+			  for(let j=0; j<=i; j++){
+				  let temp=z.shift();
+				  tempArray[j]=temp;
+			  }
+			  z.unshift('-');
+			  console.log(z);
+			  let arrayLength=tempArray.length;
+			  for(let k=0;k<arrayLength;k++){
+				let temp2=tempArray.pop();
+				z.unshift(temp2);
+				console.log(z);
+			  }
+		  }
+		}
+	  outputExpression=z.join('');
+ 	  document.getElementById('calc-output').innerHTML=outputExpression;
+  }
+  if (math=='0' && numlength<=9){
+    expression+='0';
+    outputExpression+='0';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='pi'&& numlength<=9){
+    expression+='3.14';
+    outputExpression+='π';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='square'){
+    expression+='**2';
+    outputExpression+='^2';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='cube'){
+    expression+='**3';
+    outputExpression+='^3';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='power'){
+    expression+='**';
+    outputExpression+='^';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='1'&& numlength<=9){
+    expression+='1';
+    outputExpression+='1';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='2'&& numlength<=9){
+    expression+='2';
+    outputExpression+='2';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='3'&& numlength<=9){
+    expression+='3';
+    outputExpression+='3';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='4'&& numlength<=9){
+    expression+='4';
+    outputExpression+='4';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='5'&& numlength<=9){
+    expression+='5';
+    outputExpression+='5';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='6'&& numlength<=9){
+    expression+='6';
+    outputExpression+='6';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='7'&& numlength<=9){
+    expression+='7';
+    outputExpression+='7';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='8'&& numlength<=9){
+    expression+='8';
+    outputExpression+='8';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='9'&& numlength<=9){
+    expression+='9';
+    outputExpression+='9';
+    document.getElementById('calc-output').innerHTML=outputExpression;
+    notNumber=true;
+    numlength++;
+  }
+  if (math=='ans' && ans != ''){
+  expression+='ans';
+  outputExpression+='ans';
+  document.getElementById('calc-output').innerHTML=outputExpression;
+  notNumber=true;
+  decimalNum=false;
+  }
+<<<<<<< HEAD
   document.getElementById("calc-output").innerHTML=`<span>${values.join("")}</span>`;
 }
 
@@ -150,21 +296,45 @@ function buttonEquals(){
 if ()
 
 
+=======
+>>>>>>> 6f57feb5dac567d73b83af9a2e997fb41ab7d0ff
 }
-  function add(){
-  b=Number(values.join(''));
-  let sum= eval(a + b);
-  values.splice(0, 10, sum);
-  document.getElementById("calc-output").innerHTML=`<span>${values}</span>`;
+function AC(){
+  expression='';
+  outputExpression='';
+  notNumber=false;
+  document.getElementById('calc-output').innerHTML=outputExpression;
+	decimalZero=false;
+	decimalPoint=true;
+	decimalNum=false;
+	numlength=1;
+  document.getElementById('calc-output').innerHTML=0;
 }
 
+function equals(math){
+  let finalExpression=eval(expression);
+  if (math== '='){
+    if (finalExpression==Infinity){
+      document.getElementById('calc-output').innerHTML="idk bro. Give me some addition or something.";
+    }
+    else if(finalExpression>=1000000000){
+      let exponent=finalExpression.toString().length-1;
+      document.getElementById('calc-output').innerHTML=finalExpression/(10**(exponent))+'e'+exponent;
 
-function buttonMinus() {
-  subtraction = Number(values.join(''))-(1);
-    values.splice(0, 10, subtraction);
+    }
+    else{
+      document.getElementById('calc-output').innerHTML=finalExpression;
+    }
 
-  document.getElementById("calc-output").innerHTML=`<span>${values}</span>`;
+  }
+    try {
+      finalExpression
+    }
+    catch(err) {
+      document.getElementById('calc-output').innerHTML="What did you even do to get this message.";
+    }
+    ans=finalExpression;
+    expression='';
+    outputExpression='';
+    finalExpression='';
 }
-//function button2() {
-//  document.getElementById("calc-output").innerHTML="<span style='color: white;'>2</span>";
-//}

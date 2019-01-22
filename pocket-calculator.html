@@ -1,62 +1,65 @@
 <!DOCTYPE html>
-<head>
-    <link rel="stylesheet" type="text/css" href="pocket-calculator.css" >
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="pocket-calculator.css"/>
     <script type="text/javascript" src="pocket-calculator.js"></script>
-</head>
-<body background="coolbackground.jpg">
+  </head>
+  <body background="coolbackground.jpg">
+    <div>
+    <h1 align="center">Jonah's calculator!</h1>
+    </div>
+    <div class="tableDiv">
+      <br>
+      <br>
+    <table style="width:40%" align="center">
+  <tr>
+    <td colspan='5' height="100" >
+      <p class="output "id="calc-output">0
+      </p>
 
-<div>
-<h1 align="center">Jonah's sick calculator for the clinically litty</h1>
-</div>
-<div class="tableDiv">
-  <br>
-  <br>
-  <table style="width:40%" align="center">
-    <col width="130">
-     <tr>
-       <td colspan="4" height="100">
-         <p class="output" id="calc-output">0</p>
-        </td>
-    </tr>
-    <col width="130">
-    <tr>
-    <td><button onclick="buttonAC()" class="function">AC</button></td>
-    <td><button onclick="buttonNegate()" class="function">+/-</button></td>
-    <td><button onclick="buttonPercent()" class="function">%</button></td>
-    <td><button onclick="button/()" class="function">/</button></td>
-    </tr>
-    <col width="130">
-     <tr>
-       <td><button onclick="button7()">7</button></td>
-       <td><button onclick="button8()">8</button></td>
-       <td><button onclick="button9()">9</button></td>
-       <td align="center"><button onclick="button*()" class="function">*</button></td>
-     </tr>
+    </td>
+  </tr>
+  <tr>
+    <td><button onclick="AC();" class="function">AC</button></td>
+    <td><button onclick="numbers('negation');" class="function">+/-</button></td>
+    <td><button onclick="operations('%');" class="function">%</button></td>
+    <td><button onclick="operations('/');" class="function">/</button></td>
+    <td><button onclick="operations('delete');" class="function">Del</button></td>
+  </tr>
+  <tr>
 
-     <tr>
-       <td><button onclick="button4()">4</button></td>
-       <td><button onclick="button5()">5</button></td>
-       <td><button onclick="button6()">6</button></td>
-       <td align="center"><button onclick="buttonMinus()" class="function">-</button></td>
-     </tr>
+    <td><button onclick="numbers('7');">7</button></td>
+    <td><button onclick="numbers('8');">8</button></td>
+    <td><button onclick="numbers('9');">9</button></td>
+    <td><button onclick="operations('x');" class="function">*</button></td>
+    <td><button onclick="numbers('pi');" class="function">π</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="numbers('4');">4</button></td>
+    <td><button onclick="numbers('5');">5</button></td>
+    <td><button onclick="numbers('6');">6</button></td>
+    <td><button onclick="operations('-');" class="function">-</button></td>
+    <td><button onclick="numbers('square');" class="function">x^2</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="numbers('1');">1</button></td>
+    <td><button onclick="numbers('2');">2</button></td>
+    <td><button onclick="numbers('3');">3</button></td>
+    <td><button onclick="operations('+');" class="function">+</button></td>
+    <td><button onclick="numbers('cube');" class="function">x^3</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="numbers('0');">0</button></td>
+    <td><button onclick="operations('.');">.</button></td>
+    <td><button onclick="numbers('ans');" class="function">Ans</button></td>
+    <td><button onclick="equals('=');" class="function">=</button></td>
+    <td><button onclick="numbers('power');" class="function">x^y</button></td>
+  </tr>
 
-     <tr>
-       <td><button onclick="button1()">1</button></td>
-       <td><button onclick="button2()">2</button></td>
-       <td><button onclick="button3()">3</button></td>
-       <td align="center"><button onclick="buttonPlus()" class="function">+</button></td>
-     </tr>
-
-     <tr>
-       <td colspan="2" id="zero"><button onclick="button0()">0</button></td>
-       <td><button onclick="buttonPoint()">.</button></td>
-       <td align="center"><button onclick="calculatorEquals()" class="function">=</button></td>
-     </tr>
-
-  </table>
+</table>
 <br>
 <br>
 </div>
-
-
   </body>
+
+</html>

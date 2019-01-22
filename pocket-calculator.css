@@ -13,7 +13,7 @@ table, td{
 div.tableDiv{
   background-color: deeppink;
   border-width: medium;
-  margin:250px;
+  margin:200px;
   margin-top:50px;
   border-radius:20px;
   border-style: groove;
@@ -76,6 +76,15 @@ button {
    width:130px;
   font: 1.1em "Comic Sans MS", cursive, sans-serif;
   color:black;
+}
+
+button.function:hover{
+  color: orange;
+  background-color:black;
+}
+button:hover{
+  color: deeppink;
+  background-color:black;
 }
 
 body{
