@@ -20,8 +20,8 @@ div.tableDiv{
 }
 
 p{
-    font: 1.1em "Comic Sans MS", cursive, sans-serif;
-    font-size: 30;
+    font: 2.1em "Comic Sans MS", cursive, sans-serif;
+    font-size: 50;
     color:white;
 }
 
@@ -53,6 +53,12 @@ button.function {
   margin-right:1%;
   font: 1.1em "Comic Sans MS", cursive, sans-serif;
   "Comic Sans MS", cursive, sans-serif
+}
+
+button#twoColumn{
+  width: 280px;
+  background-color:crimson;
+  color:black
 }
 
 button.mightyfine {
@@ -109,6 +115,10 @@ button.mightyfine:hover{
   background-color:black;
 }
 button.answer:hover{
+  color: crimson;
+  background-color:black;
+}
+button#twoColumn:hover{
   color: crimson;
   background-color:black;
 }
